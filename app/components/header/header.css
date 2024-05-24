@@ -1,0 +1,51 @@
+header{
+    background-color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    .logo-box{
+        display: flex;
+        align-items: center;
+        .logo{
+            font-weight: lighter;
+            font-size: 2.2rem;
+        }
+        .search-box{
+            height: 40px;
+            width: 320px;
+            margin: 0 8px;
+            border: 1px solid rgba(0, 0, 0, 0.233);
+            display: flex;
+            align-items: center;
+            button{
+                background: none;
+                border: none;
+                padding: 0px 4px;
+                cursor: pointer;
+            }
+            input{
+                padding-right: 6px;
+                height: 100%;
+                width: 100%;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+    .nav-box{
+        display: flex;
+        align-items: center;
+    }
+    .links{
+        font-size: 12px;
+        display: flex;
+        gap: 1rem;
+        margin: 0 40px;
+    }
+    .user-box{
+        display: flex;
+        gap: 0.5rem;
+    }
+}
