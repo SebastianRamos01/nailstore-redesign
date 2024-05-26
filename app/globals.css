@@ -9,27 +9,116 @@
   font-style: normal;
 }
 .banner{
-  height: 400px;
+  height: 440px;
   position: relative;
   overflow: hidden;
   .img-box{
     position: relative;
   }
-  img{
+  .banner-img{
     position: absolute;
-    top: -360px;
+    top: -320px;
     width: 100%;
 
   }
   .slogan{
     background-color: rgba(0, 0, 0, 0.336);
     height: 100%;
+    width: 100%;
     color: white;
     position: absolute;
     top: 0;
-    font-size: 5rem;
-    text-align: center;
+    font-size: 3.5rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    h3{
+      text-align: center;
+      width: 600px;
+    }
+  }
+}
+.feat-sect{
+  margin: 40px 20px;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-weight: 350;
+}
+
+.list-feat{
+  display: flex;
+  width: max-content;
+  gap: 12px;
+  margin: 8px 0;
+}
+.feat-box{
+  color: black;
+  width: fit-content;
+  width: 300px;
+  height: 440px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.feat-img{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.in-img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0%;
+}
+.desc-box{
+  width: 100%;
+  height: 64px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  padding: 2px 0;
+}
+.feat-title{
+  margin: 8px 0;
+}
+.news-box{
+  background-color: #FFC0CB;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  border-radius: 8px;
+  font-weight: 300;
+  gap: 2px;
+  color: #99616c;
+  .title{
+    font-size: 2.5rem;
+  }
+  .sub-title{
+    font-size: 1.4rem;
+  }
+  .email-box{
+    margin: 12px 0;
+    height: 32px;
+    width: 320px;
+    display: flex;
+  }
+  input{
+    padding: 0 6px;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+  }
+  button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0px 12px;
+    cursor: pointer;
   }
 }
