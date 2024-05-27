@@ -8,7 +8,7 @@ const titles = ["Explore our Featured Products", "Weekend Selected", "Newest Pro
 
 export default function Home() {
   return (
-    <body>
+    <>
       <Header />
       <div className="banner">
           <div className="img-box">
@@ -25,7 +25,7 @@ export default function Home() {
       <WeekendSelec />
       <LastProduct />
       <Footer />
-    </body>
+    </>
   );
 }
 
@@ -38,8 +38,8 @@ function Featured() {
 
   return (
     <section className="feat-sect">
-      <span>
-        {titles[0].toUpperCase()}
+      <span className="sect-title">
+        {titles[0]}
       </span>
       <ul className="list-feat">
         {filteredProducts.map((elem) => {
@@ -79,8 +79,8 @@ function WeekendSelec() {
 
   return (
     <section className="feat-sect">
-      <span>
-        {titles[1].toUpperCase()}
+      <span className="sect-title">
+        {titles[1]}
       </span>
       <ul className="list-feat">
         {filteredProducts.map((elem) => {
@@ -104,8 +104,8 @@ function LastProduct() {
 
   return (
     <section className="feat-sect">
-      <span>
-        {titles[2].toUpperCase()}
+      <span className="sect-title">
+        {titles[2]}
       </span>
       <ul className="list-feat">
         {filteredProducts.map((elem) => {

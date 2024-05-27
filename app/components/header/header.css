@@ -9,13 +9,13 @@ header{
         display: flex;
         align-items: center;
         .logo{
-            font-weight: lighter;
+            font-weight: 300;
             font-size: 2.2rem;
         }
         .search-box{
-            height: 40px;
+            height: 36px;
             width: 320px;
-            margin: 0 8px;
+            margin: 0 12px;
             border: 1px solid rgba(0, 0, 0, 0.233);
             display: flex;
             align-items: center;
@@ -42,7 +42,13 @@ header{
         font-size: 12px;
         display: flex;
         gap: 1rem;
-        margin: 0 40px;
+        margin: 0 20px;
+        .link:hover{
+            text-decoration: underline;
+        }
+    }
+    .link{
+        text-decoration: none;
     }
     .user-box{
         display: flex;
