@@ -1,0 +1,92 @@
+.prod-sect{
+    margin: 40px 40px;
+    .prod-cont{
+        padding: 20px 20px;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        .buy-cont{
+            display: flex;
+            justify-content: center;
+            min-width: 300px;
+            max-width: 320px;
+            flex-direction: column;
+            margin: 8px 0;
+            gap: 8px;
+            .quant-cont{
+                height: 40px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: #818181;
+                button{
+                    background-color: white;
+                    width: 40px;
+                    height: 100%;
+                    cursor: pointer;
+                    border-radius: 4px;
+                    border: #818181 solid 1px;
+                }
+                input{
+                    text-align: center;
+                    width: 40px;
+                    height: 100%;
+                    padding: 0 8px;
+                    outline: none;
+                }
+            }
+            .buttons-cont{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                button{
+                    border-radius: 8px;
+                    background-color: white;
+                    padding: 12px 20px;
+                    cursor: pointer;
+                    border: #818181 solid 1px;
+                }
+            }
+        }
+    }
+    .imgs-cont{
+        display: flex;
+        gap: 8px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .prod-img{
+            width: 80px;
+        }
+        .main-img{
+            width: 340px;
+        }
+    }
+    .prod-info{
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0px 40px 20px 40px;
+        .top-cont{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+            color: #818181;
+            .p-name{
+                font-size: 1.8rem;
+                margin: 8px 0px;
+                color: black;
+            }
+        }
+        .p-prize{
+            font-size: 2rem;
+            font-weight: 350;
+            margin: 8px 0;
+        }
+        .p-cat{
+        font-size: 1rem;
+        }
+    }
+}

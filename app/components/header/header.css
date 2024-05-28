@@ -53,5 +53,30 @@ header{
     .user-box{
         display: flex;
         gap: 0.5rem;
+        .user-img{
+            padding: 4px;
+            width: 32px;
+            height: 32px;
+            border-radius: 9999px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .user-img:hover{
+            background-color: #cccccc75;
+        }
+        .user-cont{
+            position: relative;
+            .user-card{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                z-index: 1;
+                padding: 10px;
+                position: absolute;
+                background-color: burlywood;   
+            }
+        }
     }
 }

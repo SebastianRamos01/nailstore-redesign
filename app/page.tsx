@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import { products } from "./data/products";
@@ -33,25 +34,24 @@ function Featured() {
   
   const filteredProducts = products.filter((product) => {
     const price = parseFloat(product.prize.replace(/[^0-9.-]/g, ""));
-    return price < 7000;
+    return price < 5100;
   });
 
   return (
     <section className="feat-sect">
-      <span className="sect-title">
-        {titles[0]}
-      </span>
       <ul className="list-feat">
         {filteredProducts.map((elem) => {
-          return <article key={elem.id} className="feat-box">
-            <div className="feat-img">
-              <img src={`/images/${elem.image}`} alt={elem.product_name} className="in-img"/>
-            </div>
-            <div className="desc-box">
-              <h5 className="feat-title">{elem.product_name}</h5>
-              <span className="feat-prize">{elem.prize}</span>
-            </div>
-          </article>
+          return <Link href={`/products/${elem.id}`} key={elem.id}>
+            <article className="feat-box">
+              <div className="feat-img">
+                <img src={`/images/${elem.image}`} alt={elem.product_name} className="in-img"/>
+              </div>
+              <div className="desc-box">
+                <h5 className="feat-title">{elem.product_name}</h5>
+                <span className="feat-prize">{elem.prize}</span>
+              </div>
+            </article>
+          </Link>
         })}
       </ul>
     </section>
@@ -78,21 +78,23 @@ function WeekendSelec() {
   const filteredProducts = products.filter((product) => product.stock >= 10);
 
   return (
-    <section className="feat-sect">
+    <section className="list-sect">
       <span className="sect-title">
         {titles[1]}
       </span>
       <ul className="list-feat">
         {filteredProducts.map((elem) => {
-          return <article key={elem.id} className="feat-box">
-            <div className="feat-img">
-              <img src={`/images/${elem.image}`} alt={elem.product_name} className="in-img"/>
-            </div>
-            <div className="desc-box">
-              <h5 className="feat-title">{elem.product_name}</h5>
-              <span className="feat-prize">{elem.prize}</span>
-            </div>
-          </article>
+          return <Link key={elem.id} href={`/products/${elem.id}`}>
+            <article key={elem.id} className="feat-box">
+              <div className="feat-img">
+                <img src={`/images/${elem.image}`} alt={elem.product_name} className="in-img"/>
+              </div>
+              <div className="desc-box">
+                <h5 className="feat-title">{elem.product_name}</h5>
+                <span className="feat-prize">{elem.prize}</span>
+              </div>
+            </article>
+          </Link>
         })}
       </ul>
     </section>
@@ -103,21 +105,23 @@ function LastProduct() {
   const filteredProducts = products.slice(-5).reverse();
 
   return (
-    <section className="feat-sect">
+    <section className="list-sect">
       <span className="sect-title">
         {titles[2]}
       </span>
       <ul className="list-feat">
         {filteredProducts.map((elem) => {
-          return <article key={elem.id} className="feat-box">
-            <div className="feat-img">
-              <img src={`/images/${elem.image}`} alt={elem.product_name} className="in-img"/>
-            </div>
-            <div className="desc-box">
-              <h5 className="feat-title">{elem.product_name}</h5>
-              <span className="feat-prize">{elem.prize}</span>
-            </div>
-          </article>
+          return <Link key={elem.id} href={`/products/${elem.id}`}>
+            <article  className="feat-box">
+              <div className="feat-img">
+                <img src={`/images/${elem.image}`} alt={elem.product_name} className="in-img"/>
+              </div>
+              <div className="desc-box">
+                <h5 className="feat-title">{elem.product_name}</h5>
+                <span className="feat-prize">{elem.prize}</span>
+              </div>
+            </article>
+          </Link>
         })}
       </ul>
     </section>

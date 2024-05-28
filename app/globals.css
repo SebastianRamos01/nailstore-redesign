@@ -43,6 +43,21 @@ body{
   }
 }
 .feat-sect{
+  padding: 20px 30px 0px 30px;
+  margin: 30px 40px;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: white;
+  border-radius: 8px;
+  .list-feat{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 12px 0;
+  }
+}
+.list-sect{
   padding: 20px 0px 0px 30px;
   margin: 30px 40px;
   overflow: hidden;
@@ -135,11 +150,11 @@ body{
   display: flex;
   gap: 20px;
   font-size: 0.8rem;
+  color: #99616c;
 }
 .active{
   list-style: none;
   background-color: #FFC0CB;
-  color: white;
   padding: 8px 24px;
   border-radius: 20px;
   cursor: pointer;
@@ -155,7 +170,7 @@ body{
 .shop-list{
   display: flex;
   flex-wrap: wrap;
-  gap: 48px;
+  gap: 42px;
   background-color: white;
   margin: 20px 0px;
   padding: 40px;

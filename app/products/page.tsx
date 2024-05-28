@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Footer from '../components/footer/Footer'
 import Header from '../components/header/Header'
 import { products } from '../data/products'
+import Link from 'next/link'
 
 const filters = ["All", "New", "A-Z", "Z-A", "Low Prize", "High Prize"]
 
@@ -61,15 +62,17 @@ function page() {
             </ul>
             <ul className='shop-list'>
                 {filteredProducts.map((elem) => {
-                    return <article key={elem.id} className="feat-box">
-                        <div className="feat-img">
-                            <img src={`/images/${elem.image}`} alt={elem.product_name} className="in-img"/>
-                        </div>
-                        <div className="desc-box">
-                            <h5 className="feat-title">{elem.product_name}</h5>
-                            <span className="feat-prize">{elem.prize}</span>
-                        </div>
-                  </article>
+                    return <Link key={elem.id} href={`/products/${elem.id}`}>
+                      <article className="feat-box">
+                          <div className="feat-img">
+                              <img src={`/images/${elem.image}`} alt={elem.product_name} className="in-img"/>
+                          </div>
+                          <div className="desc-box">
+                              <h5 className="feat-title">{elem.product_name}</h5>
+                              <span className="feat-prize">{elem.prize}</span>
+                          </div>
+                    </article>
+                    </Link>
                 })}
             </ul>
         </section>
