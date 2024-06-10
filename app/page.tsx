@@ -3,7 +3,7 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import { products } from "./data/products";
 
-const slogan = "Add a Touch of Glamour to Your Hands"
+const slogan = "Add a Touch of Glamour to Your Hands."
 const susbTexts = ["Suscribe to our newsletter", "to recieve exclusive benefits and offers"]
 const titles = ["Explore our Featured Products", "Weekend Selected", "Newest Products"]
 
@@ -17,7 +17,7 @@ export default function Home() {
           </div>
           <div className="slogan">
             <h3>
-              {slogan.toUpperCase()}
+              {slogan}
             </h3>
           </div>
       </div>
@@ -34,14 +34,14 @@ function Featured() {
   
   const filteredProducts = products.filter((product) => {
     const price = parseFloat(product.prize.replace(/[^0-9.-]/g, ""));
-    return price < 5100;
+    return price < 5700;
   });
 
   return (
     <section className="feat-sect">
       <ul className="list-feat">
         {filteredProducts.map((elem) => {
-          return <Link href={`/products/${elem.id}`} key={elem.id}>
+          return <Link href={`/products/${elem.id}`} key={elem.id} style={{textDecoration: 'none'}}>
             <article className="feat-box">
               <div className="feat-img">
                 <img src={`/images/${elem.image}`} alt={elem.product_name} className="in-img"/>
@@ -84,7 +84,7 @@ function WeekendSelec() {
       </span>
       <ul className="list-feat">
         {filteredProducts.map((elem) => {
-          return <Link key={elem.id} href={`/products/${elem.id}`}>
+          return <Link key={elem.id} href={`/products/${elem.id}`} style={{textDecoration: 'none'}}>
             <article key={elem.id} className="feat-box">
               <div className="feat-img">
                 <img src={`/images/${elem.image}`} alt={elem.product_name} className="in-img"/>
@@ -111,7 +111,7 @@ function LastProduct() {
       </span>
       <ul className="list-feat">
         {filteredProducts.map((elem) => {
-          return <Link key={elem.id} href={`/products/${elem.id}`}>
+          return <Link key={elem.id} href={`/products/${elem.id}`} style={{textDecoration: 'none'}}>
             <article  className="feat-box">
               <div className="feat-img">
                 <img src={`/images/${elem.image}`} alt={elem.product_name} className="in-img"/>

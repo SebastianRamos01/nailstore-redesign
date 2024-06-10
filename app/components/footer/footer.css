@@ -1,6 +1,7 @@
 footer{
     padding: 0 40px;
     background-color: white;
+    border-top: solid rgba(0, 0, 0, 0.151) 1px;
     .foot-cont{
         display: flex;
         justify-content: space-between;
@@ -15,7 +16,9 @@ footer{
             display: flex;
             flex-wrap: wrap;
             gap: 14px;
-            font-weight: 400;
+           .link{
+            text-decoration: none;
+           }
         }
         .subs-cont{
             display: flex;

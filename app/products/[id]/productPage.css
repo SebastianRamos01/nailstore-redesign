@@ -12,16 +12,25 @@
             max-width: 320px;
             flex-direction: column;
             margin: 8px 0;
-            gap: 8px;
-            .quant-cont{
-                height: 40px;
+            gap: 12px;
+            .buy-titles{
                 display: flex;
                 align-items: center;
+                gap: 4px;
+                .stock{
+                    font-size: small;
+                }
+            }
+            .quant-cont{
+                height: 28px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
                 gap: 10px;
                 color: #818181;
                 button{
                     background-color: white;
-                    width: 40px;
+                    width: 28px;
                     height: 100%;
                     cursor: pointer;
                     border-radius: 4px;
@@ -29,7 +38,6 @@
                 }
                 input{
                     text-align: center;
-                    width: 40px;
                     height: 100%;
                     padding: 0 8px;
                     outline: none;
@@ -39,8 +47,17 @@
                 display: flex;
                 flex-direction: column;
                 gap: 12px;
+                .add-btn{
+                    background-color: #FFC0CB;                    
+                    display: flex;
+                    gap: 4px;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    border: none;
+                }
                 button{
-                    border-radius: 8px;
+                    border-radius: 4px;
                     background-color: white;
                     padding: 12px 20px;
                     cursor: pointer;
@@ -68,11 +85,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 0px 40px 20px 40px;
+        margin: 0px 40px;
         .top-cont{
             display: flex;
+            gap: 4px;
             flex-direction: column;
-            margin-bottom: 40px;
             color: #818181;
             .p-name{
                 font-size: 1.8rem;
@@ -84,9 +101,6 @@
             font-size: 2rem;
             font-weight: 350;
             margin: 8px 0;
-        }
-        .p-cat{
-        font-size: 1rem;
         }
     }
 }

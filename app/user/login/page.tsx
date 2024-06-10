@@ -35,7 +35,7 @@ function page() {
                             <div className='links'>
                                 <Link href={"/user/reset_password"} className='link'>
                                     Forgot your Password ? Click here
-                                </Link><br />
+                                </Link>
                                 <Link href={"/user/register"} className='link'>
                                     Register here Click here
                                 </Link>

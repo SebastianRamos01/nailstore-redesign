@@ -34,24 +34,26 @@ function page({ params }: { params: { id: string } }) {
                         <small className='p-cat'>Code N: {foundProduct?.id}</small>
                         <small className='p-cat'>{foundProduct?.category}</small>
                     </div>
+                    <p className='p-desc'>{foundProduct?.description}</p>
                     <div>
                         <p className='p-prize'>{foundProduct?.prize}</p>
                         <p>Disponible en 12 cuotas</p>
                     </div>
-                    <p className='p-desc'>{foundProduct?.description}</p>
+                    <div className='buy-cont'>
+                        <div className='buy-titles'>
+                            <p>Amount</p>
+                            <p className='stock'>(Stock available {foundProduct?.stock})</p>
+                        </div>
+                        <div className='quant-cont'>
+                            <button>-</button>
+                            <input type="text" inputMode='numeric' name="" id="" defaultValue={1}/>
+                            <button>+</button>
+                        </div>
+                        <div className='buttons-cont'>
+                            <button className='add-btn'><img src="/icons/cart-icon.svg" alt="cart" />Add to Cart</button>
+                            <button>Buy Now</button>
+                        </div>
                 </div>
-                <div className='buy-cont'>
-                    <p>Amount</p>
-                    <div className='quant-cont'>
-                        <button>-</button>
-                        <input type="text" inputMode='numeric' name="" id="" defaultValue={1}/>
-                        <button>+</button>
-                        <p>Stock available {foundProduct?.stock}</p>
-                    </div>
-                    <div className='buttons-cont'>
-                        <button>Add to Cart</button>
-                        <button>Buy Now</button>
-                    </div>
                 </div>
             </article>
         </section>

@@ -62,7 +62,7 @@ function page() {
             </ul>
             <ul className='shop-list'>
                 {filteredProducts.map((elem) => {
-                    return <Link key={elem.id} href={`/products/${elem.id}`}>
+                    return <Link key={elem.id} href={`/products/${elem.id}`} style={{textDecoration: 'none'}}>
                       <article className="feat-box">
                           <div className="feat-img">
                               <img src={`/images/${elem.image}`} alt={elem.product_name} className="in-img"/>

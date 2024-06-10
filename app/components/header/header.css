@@ -9,8 +9,8 @@ header{
         display: flex;
         align-items: center;
         .logo{
-            font-weight: 300;
-            font-size: 2.2rem;
+            font-weight: 450;
+            font-size: 1.7rem;
         }
         .search-box{
             height: 36px;
@@ -39,7 +39,7 @@ header{
         align-items: center;
     }
     .links{
-        font-size: 12px;
+        font-size: 0.9rem;
         display: flex;
         gap: 1rem;
         margin: 0 20px;
@@ -54,9 +54,9 @@ header{
         display: flex;
         gap: 0.5rem;
         .user-img{
-            padding: 4px;
-            width: 32px;
-            height: 32px;
+            padding: 6px;
+            width: 34px;
+            height: 34px;
             border-radius: 9999px;
             img{
                 width: 100%;
@@ -64,7 +64,7 @@ header{
             }
         }
         .user-img:hover{
-            background-color: #cccccc75;
+            background-color: #cccccc3d;
         }
         .user-cont{
             position: relative;

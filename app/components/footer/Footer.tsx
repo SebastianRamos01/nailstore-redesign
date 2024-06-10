@@ -1,3 +1,4 @@
+import Link from "next/link";
 import "../footer/footer.css"
 
 const info = "Nailstore";
@@ -9,12 +10,16 @@ const rigths = ["Buenos Aires, Argentina",
 "Ramos Sebastian, 2024",
 "All Rights Reserved@"
 ]
-const links = [
-  "Home",
-  "Products",
-  "Visit Us",
-  "Contact Us"
-]
+const links = [{
+  name: 'Products',
+  ref: 'products'
+},{
+  name: 'Visit us',
+  ref: 'visit_us'
+},{
+  name: 'Contact us',
+  ref: 'contact_us'
+}]
 
 function Footer() {
   return (
@@ -28,9 +33,9 @@ function Footer() {
         </div>
         <ul className="links-cont">
           {links.map((elem, i) => {
-            return <span className="link" key={i}>
-              {elem}
-            </span>
+            return <Link href={elem.ref} className="link" key={i}>
+              {elem.name}
+            </Link>
           })}
         </ul>
         <article className="subs-cont">

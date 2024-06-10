@@ -8,9 +8,6 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
-body{
-  background-color: #f5f5f5;
-}
 .banner{
   height: 440px;
   position: relative;
@@ -25,18 +22,17 @@ body{
 
   }
   .slogan{
-    
+    background-color: rgba(0, 0, 0, 0.308);
     height: 100%;
     width: 100%;
     color: white;
     position: absolute;
     top: 0;
-    font-size: 3.5rem;
+    font-size: 3rem;
     display: flex;
     align-items: center;
-    justify-content: center;
     h3{
-      text-align: center;
+      margin: 0px 80px;
       width: 600px;
       font-weight: 350;
     }
@@ -48,7 +44,6 @@ body{
   overflow: hidden;
   font-size: 1.5rem;
   font-weight: 400;
-  background-color: white;
   border-radius: 8px;
   .list-feat{
     display: flex;
@@ -61,9 +56,8 @@ body{
   padding: 20px 0px 0px 30px;
   margin: 30px 40px;
   overflow: hidden;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 400;
-  background-color: white;
   border-radius: 8px;
 }
 .list-feat{
@@ -74,6 +68,8 @@ body{
 }
 .feat-box{
   color: black;
+  background-color: white;
+  border-radius: 8px;
   width: fit-content;
   width: 280px;
   height: 420px;
@@ -81,14 +77,20 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-.feat-img{
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.in-img{
+  }
+  .feat-box:hover{
+    .in-img{
+      transform: scale(1.1);
+      }
+  }
+  .feat-img{
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        position: relative;
+  }
+  .in-img{
+  transition: transform 300ms;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -98,11 +100,11 @@ body{
   width: 100%;
   height: 64px;
   font-weight: 400;
-  font-size: 1rem;
-  padding: 2px 0;
+  font-size: 0.9rem;
+  padding: 4px 0px;
 }
 .feat-title{
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 6px 0;
   font-weight: 450;
 }
@@ -150,7 +152,7 @@ body{
   display: flex;
   gap: 20px;
   font-size: 0.8rem;
-  color: #99616c;
+  color: black;
 }
 .active{
   list-style: none;
@@ -164,16 +166,13 @@ body{
   background-color: white;
   padding: 8px 24px;
   border-radius: 20px;
-  border: #FFC0CB 1px solid;
   cursor: pointer;
 }
 .shop-list{
   display: flex;
   flex-wrap: wrap;
   gap: 42px;
-  background-color: white;
-  margin: 20px 0px;
-  padding: 40px;
+  padding: 0 40px 20px 40px;
 }
 
 .visit-cont{

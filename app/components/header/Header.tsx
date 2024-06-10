@@ -2,11 +2,16 @@ import Link from "next/link"
 import "../header/header.css"
 
 const info = "Nailstore"
-const links = [
-    'products',
-    'visit_us',
-    'contact_us'
-]
+const links = [{
+    name: 'Products',
+    ref: 'products'
+},{
+    name: 'Visit us',
+    ref: 'visit_us'
+},{
+    name: 'Contact us',
+    ref: 'contact_us'
+}]
 
 function Header() {
   return (
@@ -28,7 +33,7 @@ function Header() {
             <ul className="links">
                 {
                     links.map((link, i) => {
-                        return <Link href={`/${link}`} key={i} className="link">{link.toUpperCase()}</Link>
+                        return <Link href={`/${link.ref}`} key={i} className="link">{link.name}</Link>
                     })
                 }
             </ul>
